@@ -1,0 +1,207 @@
+
+/* Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Variáveis */
+:root {
+    /* Paleta de cores */
+    --cor-principal: #8a1a9e;
+    --cor-destaque: #d000f0;
+    --cor-01: #f9f9f9;
+    --cor-02: #cfcfcf;
+    --cor-03: #2c2e32;
+    --cor-04: #232323;
+    --cor-05: #000000;
+    --cor-06: #42454a;
+}
+
+/* Reset (limpa as configurações padrão) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cor-04);
+    color: var(--cor-01)
+}
+
+p{
+    margin: 1rem 0;
+}
+
+/* ==== Classes ==== */
+
+/*  Banner */
+.banner {
+    position: relative;
+    height: 86vh;
+    display: flex;
+    /* flex-direction: row; /* default (padrão) */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    /* x y desfoque a cor */
+    text-shadow: 0.1rem 0.1rem 0.5rem var(--cor-05)
+}
+
+.banner span{
+    color: var(--cor-principal);
+}
+
+.banner p{
+    font-size: 2rem;
+}
+
+.cover {
+    position:absolute;
+    z-index: -10;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/banner.jpg');
+    background-size: cover;
+    filter: brightness(30%);
+}
+
+/* Menu */
+.menu {
+    padding: 0.8rem 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.menu ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1rem;
+
+}
+
+.menu a{
+    text-decoration: none ;
+    color: inherit; /* herda o valor do elemento pai*/
+    transition: 0.5s es; /* 500ms*/
+    padding: 0.8rem 0.1rem;
+
+}
+
+.menu a:hover {
+    color: var(--cor-destaque);
+
+}
+/* Corpo */
+.corpo {
+    background-color: var(--cor-03);
+    min-height: 25rem;
+    padding: 3rem;
+    text-align: justify;
+    font-size: 1.2rem;
+}
+
+.modalidades{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-top: 8rem;
+    padding: 0 3rem;
+}
+
+.card {
+    border-radius: 0.5rem;
+    transition: 0.3s;
+    overflow: hidden;
+}
+.card img {
+    width: 100%;
+}
+
+.card div { 
+    padding: 1rem;
+}
+.card:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    /* Sombra: X Y Desfoque Espressura Cor */
+    box-shadow: 0 0 0.5rem 0.2rem var(--cor-04);
+}
+
+/* Mapa */
+.mapa {
+    width: 86vw;
+    height: 100vh;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+}
+
+/* Rodapé */
+.rodape {
+    color: var(--cor-02);
+    min-height: 16rem;
+    text-align: justify;
+    padding: 2rem 8rem;
+
+    display: grid;
+    /* Auto == ocupa apenas o espaço necessário */
+    grid-template-columns: auto auto 40% auto auto;
+    /* links  barra  parceiros  barra  redes sociais */
+    justify-items: center;
+}
+
+.rodape ul {
+    list-style-type: none;
+}
+
+.rodape li {
+    margin-bottom: 0.5rem;
+}
+
+.rodape a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.rodape a:hover {
+    color: var(--cor-01)
+}
+
+.rodape i {
+    font-size: 2.5rem;
+}
+
+.rede-sociais div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem
+}
+
+.barra {
+    height: 100%;
+    border-left:  solid 1px var(--cor-06)
+}
+
+
+
+
+
+
+
+
